@@ -113,6 +113,7 @@ plt.title('SARIMA Forecast')
 plt.legend()
 plt.show()
 
+"""# **prophet Model**"""
 !pip install prophet
 
 from prophet import Prophet
@@ -155,6 +156,8 @@ def create_sequences(data, time_steps=60):
 X, y = create_sequences(close_scaled)
 X_train, y_train = X[:-60], y[:-60]  # Last 60 for testing
 X_test, y_test = X[-60:], y[-60:]
+
+#"""***LSTM***"""
 
 # LSTM model
 model = Sequential()
